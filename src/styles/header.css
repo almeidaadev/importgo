@@ -1,9 +1,5 @@
 @import url(./colorPalette.css);
 
-.menu-burguer {
-  display: none;
-}
-
 header.container-header {
   position: relative;
 
@@ -66,7 +62,14 @@ header.container-header {
 
 @media (width <= 900px) {
   header.container-header {
+    & nav[data-navigation-header] {
+      position: absolute;
+      right: 5rem;
+      top: 7rem;
+    }
+
     & ul[data-list-header] {
+      display: none;
       flex-direction: column;
       text-align: center;
 
@@ -100,9 +103,12 @@ header.container-header {
 
     & .open {
       position: absolute;
-
       & > div + div {
         margin-top: 0;
+      }
+
+      & ul[data-list-header] {
+        display: block;
       }
 
       & > div {
