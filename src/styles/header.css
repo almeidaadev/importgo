@@ -11,9 +11,14 @@ header.container-header {
   justify-content: space-between;
   align-items: center;
 
+  background: rgba(0 0 0 / 0.8);
+
+  padding: 0 4rem;
+
   & > .logo {
     flex: 1 1 auto;
   }
+
   & > .logo > a > img {
     width: 100px;
     height: 100px;
@@ -22,6 +27,23 @@ header.container-header {
 
   & nav[data-navigation-header] {
     flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+
+    & .profile {
+      & img {
+        opacity: .6;
+      }
+
+      & img:hover {
+        opacity: 1;
+        cursor: pointer;
+        transition: 1s;
+      }
+      & img + img {
+        margin-left: 1rem;
+      }
+    }
   }
 
   & ul[data-list-header] {
@@ -32,10 +54,26 @@ header.container-header {
     }
 
     & > li > a {
+      position: relative;
       color: var(--white);
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: 500;
       opacity: 0.7;
+
+      width: 0%;
+    }
+
+    & > li > a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+
+      width: 100%;
+      height: 1px;
+
+      background: #ffffff;
+      animation: widthAnimation 1s ease-in-out;
     }
 
     & > li > a:hover {
@@ -43,23 +81,6 @@ header.container-header {
     }
   }
 }
-
-.main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: url(../assets/background.jpg);
-  background-position: center;
-  background-size: cover;
-  object-fit: contain;
-  z-index: -100;
-}
-
 @media (width <= 900px) {
   header.container-header {
     & ul[data-list-header] {
@@ -120,3 +141,29 @@ header.container-header {
     }
   }
 }
+
+@keyframes widthAnimation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* .main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url(../assets/background.jpg);
+  background-position: center;
+  background-size: cover;
+  object-fit: contain;
+  z-index: -100;
+} */
