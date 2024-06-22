@@ -86,7 +86,7 @@ header.container-header {
       & > div {
         width: 1.8rem;
         height: 2px;
-        background-color: red;
+        background-color: var(--white);
       }
 
       & > div + div {
@@ -94,7 +94,32 @@ header.container-header {
       }
     }
 
+    & .active {
+      position: absolute;
+
+      & > div + div {
+        margin-top: 0;
+      }
+
+      & > div {
+        width: 1.8rem;
+        height: 2px;
+      }
+
+      & div:nth-child(1) {
+        transform: rotate(-50deg);
+      }
+      & div:nth-child(2) {
+        visibility: hidden;
+      }
+      & div:nth-child(3) {
+        position: relative;
+        top: -3.8px;
+        transform: rotate(50deg);
+      }
 
     
+    }
   }
 }
+
