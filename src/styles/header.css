@@ -94,7 +94,7 @@ header.container-header {
       }
     }
 
-    & .active {
+    & .open {
       position: absolute;
 
       & > div + div {
@@ -117,9 +117,6 @@ header.container-header {
         top: -3.8px;
         transform: rotate(50deg);
       }
-
-    
     }
   }
 }
-
