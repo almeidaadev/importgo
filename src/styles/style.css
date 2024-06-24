@@ -22,6 +22,22 @@ body {
   font-weight: 600;
 }
 
+.initial-header i {
+  margin-right: 0.5rem;
+  animation: upDown 1s infinite ease-in-out;
+
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(-4px); 
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 header.container-header {
   position: relative;
 
@@ -223,11 +239,15 @@ main.container-main {
     height: 100vh;
 
     & h1 {
-      max-width: 500px;
-      font-weight: 600;
-      font-size: 1.5rem;
-      letter-spacing: 1.2px;
-      line-height: 2rem;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      & span {
+        display: block;
+        letter-spacing: 4px;
+        color: var(--orange);
+      }
     }
 
     & img {
@@ -328,7 +348,8 @@ main.container-main {
   }
 
   main.container-main .section1 {
-    flex-direction: column-reverse;
+    flex-direction: column; 
+    /*TODO: Direction section 1 */
     justify-content: center;
     gap: 3rem;
 

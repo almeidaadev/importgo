@@ -3,5 +3,5 @@ import header from "./header.js";
 import softscroll from "./softSroll.js";
 
 header();
-initAnimacaoScroll();
+// initAnimacaoScroll();
 softscroll();
