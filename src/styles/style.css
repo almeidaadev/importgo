@@ -215,7 +215,6 @@ main.container-main {
     z-index: -100;
   }
 
-
   & .section1 {
     display: flex;
     align-items: center;
@@ -285,7 +284,7 @@ main.container-main {
     max-width: 20px;
     max-height: 20px;
   }
-
+  
   & .links {
     position: relative;
 
@@ -321,4 +320,25 @@ main.container-main {
       transform: scale(0.8);
     }
   }
+}
+
+swiper-container {
+  width: 600px;
+  height: 400px;
+
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+swiper-slide img {
+  width: 200px;
+  height: 200px;
+  z-index: 999;
 }
