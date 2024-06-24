@@ -1,6 +1,7 @@
+import initAnimacaoScroll from "./animationScroll.js";
 import header from "./header.js";
-import carousel from "./swiper.js";
-
+import softscroll from "./softSroll.js";
 
 header();
-carousel();
+initAnimacaoScroll();
+softscroll();

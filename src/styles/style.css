@@ -7,7 +7,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background: var(--gray-t);
 
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .initial-header {
@@ -237,9 +237,74 @@ main.container-main {
     }
   }
 
+  & .products-slides {
+    & h1 {
+      text-align: center;
+      margin-top: 5rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    & .slides {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      border-radius: 0.5rem;
+
+      height: 50vh;
+      overflow: hidden;
+
+      margin: 5rem auto;
+
+      & .slide {
+        position: absolute;
+        height: 100%;
+        opacity: 0;
+        inset: 0;
+        animation: slide-show 12s infinite;
+
+        & img {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      & .slide2 {
+        animation-delay: 4s;
+      }
+
+      & .slide3 {
+        animation-delay: 8s;
+      }
+    }
+  }
+
   & .section4 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.05;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
@@ -284,7 +349,6 @@ main.container-main {
     max-width: 20px;
     max-height: 20px;
   }
-  
   & .links {
     position: relative;
 
@@ -320,25 +384,4 @@ main.container-main {
       transform: scale(0.8);
     }
   }
-}
-
-swiper-container {
-  width: 600px;
-  height: 400px;
-
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-
-swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-}
-
-swiper-slide img {
-  width: 200px;
-  height: 200px;
-  z-index: 999;
 }
