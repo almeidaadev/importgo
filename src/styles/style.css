@@ -8,7 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--gray-t);
 
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .initial-header {
@@ -46,13 +46,11 @@ header.container-header {
   justify-content: center;
   align-items: center;
 
-  /* glass */
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  /*  */
 
   padding: 0 4rem;
 
@@ -80,7 +78,7 @@ header.container-header {
 
     & > li > a {
       position: relative;
-      color: var(--dark);
+      color: var(--white);
       font-size: 1rem;
       font-weight: 500;
       opacity: 0.9;
@@ -103,6 +101,16 @@ header.container-header {
 
     & > li > a:hover {
       opacity: 1;
+    }
+  }
+
+  &.efect-header {
+    background: rgba(255 255 255);
+
+    & ul[data-list-header] {
+      & > li > a {
+        color: var(--dark);
+      }
     }
   }
 }
@@ -137,6 +145,10 @@ header.container-header {
         margin-left: 0;
         margin-top: 2.5rem;
       }
+
+      & > li > a {
+        color: var(--dark);
+      }
     }
 
     & .menu-burguer {
@@ -155,7 +167,7 @@ header.container-header {
       & > div {
         width: 1.8rem;
         height: 2px;
-        background-color: var(--dark);
+        background-color: var(--white);
       }
 
       & > div + div {
@@ -192,6 +204,19 @@ header.container-header {
         transform: rotate(50deg);
       }
     }
+
+    &.efect-header {
+      & .menu-burguer {
+        & > div {
+          background-color: var(--dark);
+        }
+      }
+
+      & nav[data-navigation-header] {
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        background: rgba(245 245 245);
+      }
+    }
   }
 }
 
@@ -208,22 +233,22 @@ header.container-header {
     max-width: 500px;
     margin-top: -4rem;
   }
-}
 
-.home::before {
-  content: "";
-  height: 100vh;
-  top: 2.7rem;
+  &::before {
+    content: "";
+    height: 100vh;
+    top: 2.7rem;
 
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/imgIdeas/Confira\ nossos\ produtos.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-position: center;
-  object-fit: contain;
-  z-index: -200;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/imgIdeas/Confira\ nossos\ produtos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+    z-index: -200;
+  }
 }
 
 @keyframes widthAnimation {
@@ -248,7 +273,6 @@ header.container-header {
 
 /* Main  */
 main.container-main {
-  /* position: relative; */
   width: 100%;
 
   padding: 0 2.5rem;
@@ -418,7 +442,7 @@ main.container-main {
       background: var(--toastify-icon-color-info);
 
       position: absolute;
-      right: 10.5rem;
+      right: 7.5rem;
     }
 
     & a + a {
@@ -434,34 +458,13 @@ main.container-main {
 
   & .links:has(:hover) {
     a {
-      transform: scale(1.2);
-      & img {
-        fill: red;
-      }
+      transform: scale(1.1);
     }
 
     a:not(:hover) {
-      transform: scale(0.8);
+      transform: scale(1);
     }
   }
-}
-
-[data-anime="accordion"] dd {
-  display: none;
-}
-
-[data-anime="accordion"] dt::after {
-  content: "⬎";
-  margin-left: 10px;
-}
-
-[data-anime="accordion"] dt.ativo::after {
-  content: "⬏";
-}
-
-[data-anime="accordion"] dd.ativo {
-  display: block;
-  animation: slideDown 0.5s forwards;
 }
 
 @keyframes slideDown {

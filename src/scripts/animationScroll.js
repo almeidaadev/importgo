@@ -3,7 +3,7 @@ export default function initAnimacaoScroll() {
   if (sections.length) {
     const windowMetade = window.innerHeight * 0.6;
 
-    function animaScroll() {
+    function animationScroll() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const isSectionVisible = sectionTop - windowMetade < 0;
@@ -12,8 +12,8 @@ export default function initAnimacaoScroll() {
       });
     }
 
-    animaScroll();
+    animationScroll();
 
-    window.addEventListener("scroll", animaScroll);
+    window.addEventListener("scroll", animationScroll);
   }
 }
