@@ -1,0 +1,42 @@
+@import url(../styles/colorPalette.css);
+@import url(../styles/reset.css);
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--gray-t);
+}
+
+.container-main {
+  display: grid;
+  place-items: center;
+
+  margin-top: -4rem;
+  height: 100vh;
+  padding: 0 4rem;
+
+  & h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+  }
+
+  & .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    & .squares{
+      padding: 14rem 8.5rem;
+      background: red;
+    }
+  }
+}
+
+@media (width <= 1350px) {
+  .container-main {
+    & .products {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 200px);
+    }
+  }
+}
