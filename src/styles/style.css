@@ -432,6 +432,10 @@ main.container-main {
   }
 
   & .links {
+    & img {
+      width: 20px;
+      height: 20px;
+    }
     position: relative;
 
     display: flex;
