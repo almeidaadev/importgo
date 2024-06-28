@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--gray-t);
+  background: var(--white);
 
   /* overflow-x: hidden; */
 }
@@ -230,32 +230,31 @@ header.container-header {
   height: 100vh;
 
   & .left-home {
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     & h1 {
       color: #f9f9f9;
       font-size: 5rem;
-      margin-top: -4rem;
 
       & span {
         background: #2a6ef2;
         max-width: 450px;
         font-size: 3.5rem;
         border-radius: 1rem;
-        display: block;
         text-align: center;
-        margin-left: 4.5rem;
-        padding: 1rem 0;
+        padding: 1rem 4rem;
       }
     }
 
     & a {
       margin-top: 2.5rem;
       background: var(--white);
-      color: #2a6ef2;
+      color: var(--blue-a);
       padding: 1rem 5rem;
       border-radius: 0.5rem;
       font-size: 1.5rem;
@@ -310,41 +309,39 @@ header.container-header {
 main.container-main {
   width: 100%;
 
-  padding: 0 2.5rem;
+  padding: 0 4rem;
   z-index: 100;
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 8rem;
-    background-image: url("../assets/imgIdeas/Decore.png");
-    background-size: cover;
-    object-fit: contain;
-    width: 600px;
-    height: 560px;
-    z-index: -100;
-  } */
-
-  & .section1 {
+  & .sobre-nos {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: -5rem;
     height: 100vh;
+    
+    & .card-sobre-nos {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(0, 38, 255, 0.3);
+      padding: 2rem;
+      
+      & h1 {
+        font-size: 4rem;
+        color: var(--blue-a);
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
 
-    & h1 {
-      max-width: 500px;
-      font-weight: 600;
-      font-size: 1.5rem;
-      letter-spacing: 1.2px;
-      line-height: 2rem;
-    }
-
-    & img {
-      width: 400px;
-      height: 400px;
-      border-radius: 1rem;
+      & p {
+        max-width: 800px;
+        font-size: 1.1rem;
+        text-align: justify;
+      }
     }
   }
 
@@ -390,14 +387,15 @@ main.container-main {
     }
   }
 
-  & .section4 {
+  & .location {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 6rem;
 
     & h2 {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       font-size: 2.5rem;
       letter-spacing: 2px;
       font-weight: 500;
@@ -431,6 +429,23 @@ main.container-main {
 @media (width <= 1024px) {
   main.container-main {
     padding: 0 1.5rem;
+  }
+  
+  .home {
+    margin-top: -10rem;
+    & img {
+      display: none;
+    }
+    & .left-home {  
+      & h1 {
+        & span {
+          padding: 0 2rem;
+        }
+      }
+      & a {
+        border: 1px solid var(--dark);
+      }
+    }
   }
 
   header.container-header {
@@ -527,4 +542,74 @@ main.container-main {
 [data-anime="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Estilos do menu suspenso de contato */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+@keyframes upDownDrop {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--blue-a);
+  color: var(--white);
+  min-width: 200px;
+  text-align: center;
+
+  border-radius: .5rem;
+
+  top: 3rem;
+  left: -50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+  animation: upDownDrop .5s ease-in-out;
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ccc;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.operingHours ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.operingHours ul li::before{
+  content: "";
+  padding: 0 1rem;
+  background: red;
+  margin-right:  1rem;
 }
