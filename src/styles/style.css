@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url(./reset.css);
@@ -8,7 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--white);
 
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .initial-header {
@@ -25,7 +25,7 @@ body {
 
 .initial-header i {
   margin-right: 0.5rem;
-  animation: upDown 1s infinite ease-in-out;
+  animation: upDown 1s infinite;
 }
 
 @keyframes upDown {
@@ -72,6 +72,9 @@ header.container-header {
 
   & ul[data-list-header] {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
     & li + li {
       margin-left: 1.5rem;
     }
@@ -83,7 +86,7 @@ header.container-header {
       font-weight: 500;
       opacity: 0.9;
 
-      width: 0%;
+      width: 100%;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -94,14 +97,64 @@ header.container-header {
       bottom: -5px;
 
       width: 100%;
-      height: 1px;
+      height: 2px;
 
       background: var(--white);
       animation: widthAnimation 1s ease-in-out;
     }
 
+    & li:last-child a {
+      padding: 1rem;
+    }
     & > li > a:hover {
       opacity: 1;
+    }
+
+    & .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    @keyframes upDownDrop {
+      from {
+        transform: translateY(-10px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+    & .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--blue-a);
+      color: var(--white);
+      min-width: 200px;
+      text-align: center;
+
+      border-radius: 0.5rem;
+
+      top: 3rem;
+      left: -50px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      animation: upDownDrop 0.5s ease-in-out;
+    }
+
+    & .dropdown-content a {
+      color: var(--white);
+      padding: 12px 16px;
+      display: block;
+    }
+
+    & .dropdown-content a:hover {
+      background-color: #ccc;
+    }
+
+    & .dropdown:hover .dropdown-content {
+      display: block;
     }
   }
 
@@ -254,6 +307,7 @@ header.container-header {
     & a {
       margin-top: 2.5rem;
       background: var(--white);
+      border: 1px solid var(--dark);
       color: var(--blue-a);
       padding: 1rem 5rem;
       border-radius: 0.5rem;
@@ -286,11 +340,11 @@ header.container-header {
 }
 
 @keyframes widthAnimation {
-  0% {
+  from {
     width: 0%;
   }
 
-  100% {
+  to {
     width: 100%;
   }
 }
@@ -318,7 +372,7 @@ main.container-main {
     justify-content: space-around;
     margin-top: -5rem;
     height: 100vh;
-    
+
     & .card-sobre-nos {
       background: rgba(0, 0, 0, 0.1);
       border-radius: 16px;
@@ -327,7 +381,7 @@ main.container-main {
       -webkit-backdrop-filter: blur(5px);
       border: 1px solid rgba(0, 38, 255, 0.3);
       padding: 2rem;
-      
+
       & h1 {
         font-size: 4rem;
         color: var(--blue-a);
@@ -430,13 +484,13 @@ main.container-main {
   main.container-main {
     padding: 0 1.5rem;
   }
-  
+
   .home {
     margin-top: -10rem;
     & img {
       display: none;
     }
-    & .left-home {  
+    & .left-home {
       & h1 {
         & span {
           padding: 0 2rem;
@@ -490,6 +544,12 @@ main.container-main {
     justify-content: flex-end;
     align-items: center;
 
+    & a:last-child {
+      animation: upDown 1s infinite;
+      & i {
+        color: var(--dark);
+      }
+    }
     &::after {
       content: "";
       height: 30px;
@@ -497,7 +557,7 @@ main.container-main {
       background: var(--toastify-color-dark);
 
       position: absolute;
-      right: 7.5rem;
+      right: 10rem;
     }
 
     & a + a {
@@ -544,72 +604,27 @@ main.container-main {
   transform: translate3d(0, 0, 0);
 }
 
-
-
 nav ul li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  /*padding: 14px 16px;*/
   text-decoration: none;
 }
 
-
-/* Estilos do menu suspenso de contato */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-@keyframes upDownDrop {
-  from {
-    transform: translateY(-10px);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--blue-a);
-  color: var(--white);
-  min-width: 200px;
-  text-align: center;
-
-  border-radius: .5rem;
-
-  top: 3rem;
-  left: -50px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-
-  animation: upDownDrop .5s ease-in-out;
-}
-
-.dropdown-content a {
-  color: var(--white);
-  padding: 12px 16px;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ccc;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.operingHours ul {
+& .operingHours ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  & .open::before {
+    content: "";
+    background: green;
+  }
 }
-.operingHours ul li::before{
+& .operingHours ul li::before {
   content: "";
   padding: 0 1rem;
   background: red;
-  margin-right:  1rem;
+  margin-right: 1rem;
 }

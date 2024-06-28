@@ -6,4 +6,14 @@ export default function initFuncionamento() {
   const nowDate = new Date();
   const dayWeek = nowDate.getDay();
   const nowHours = nowDate.getHours();
+
+  const test = [1, 2, 3, 4, 5].indexOf(dayWeek);
+  const weekOpen = daysWeek.indexOf(dayWeek) !== -1;
+
+  const open = (nowHours >= timeWeek[0] && nowHours < timeWeek[1] )
+  
+
+  if (weekOpen && open) {
+    funcionamento.classList.add("open");
+  }
 }
