@@ -1,7 +1,7 @@
 export default function contact() {
   document.addEventListener("DOMContentLoaded", function (e) {
     e.preventDefault();
-    
+
     const dropdown = document.querySelector(".dropdown");
     const dropdownContent = document.querySelector(".dropdown-content");
     const event = ["mouseenter", "click"];

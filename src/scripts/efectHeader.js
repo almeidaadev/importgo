@@ -5,8 +5,10 @@ export default function efectHeader() {
       let header = $(".container-header");
 
       $(window).scrollTop() > homeHeight
-        ? header.addClass("efect-header")
-        : header.removeClass("efect-header");
+        ? 
+          header.addClass("efect-header")
+        :
+          header.removeClass("efect-header");
     });
   });
 }
