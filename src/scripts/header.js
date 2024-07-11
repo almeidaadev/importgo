@@ -29,9 +29,5 @@ export default function menu() {
         $(".menu-burguer").removeClass("open");
       }
     });
-
-    $(window).scroll(function () {
-      dataNavigationHeader.style.display = "none";
-    });
   });
 }
