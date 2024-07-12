@@ -3,6 +3,7 @@
 
 @import url(./reset.css);
 @import url(./colorPalette.css);
+@import url(../components/header.css);
 
 body {
   font-family: "Poppins", sans-serif;
@@ -11,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-.initial-header {
+/* .initial-header {
   background: var(--dark);
   color: var(--white);
 
@@ -233,7 +234,7 @@ header.container-header {
       }
     }
   }
-}
+} */
 
 .home {
   display: flex;

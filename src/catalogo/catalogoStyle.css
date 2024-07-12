@@ -1,11 +1,21 @@
 @import url(../styles/colorPalette.css);
 @import url(../styles/reset.css);
+@import url(../components/header.css);
 
 body {
     font-family: "Poppins", sans-serif;
     background: var(--white);
 }
 
+.initial-header {
+    background: var(--white);
+    color: var(--dark);
+    padding: .5rem 0;
+}
+header.container-header {
+    background: var(--dark);
+    color: var(--white);
+}
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -13,6 +23,19 @@ body {
     place-items: center;
     gap: 1rem;
     margin-top: 2rem;
+}
+
+@media (width <= 1120px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+@media (width <= 750px) {
+    .products {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .infoInitial {
