@@ -4,7 +4,7 @@
 @import url(./reset.css);
 @import url(./colorPalette.css);
 @import url(../components/header.css);
-
+@import url(../components/footer.css);
 body {
   font-family: "Poppins", sans-serif;
   background: var(--white);
@@ -299,16 +299,6 @@ header.container-header {
   }
 }
 
-@keyframes widthAnimation {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes rightLeft {
   from {
     transform: translateX(200px);
@@ -492,7 +482,7 @@ main.container-main {
   }
 }
 
-.container-footer {
+/* .container-footer {
   background: 	#20263e;
   padding: 2rem 0 ;
 
@@ -538,7 +528,16 @@ main.container-main {
     }
   }
 }
-
+@media (width < 660px) {
+  .container-footer {
+    padding: 0;
+    
+    & .links {
+      flex-direction: column;
+      gap: .5rem !important;
+    }
+  }
+} */
 @keyframes slideDown {
   from {
     opacity: 0;

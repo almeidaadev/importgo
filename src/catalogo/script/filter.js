@@ -21,6 +21,7 @@ export default function filter() {
         } else {
             cards.forEach((card) => {
                 card.style.display = "block";
+
             });
         }
     });
