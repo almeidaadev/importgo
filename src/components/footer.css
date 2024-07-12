@@ -1,56 +1,85 @@
 .container-footer {
-    background: 	#20263e;
-    padding: 2rem 0 ;
-  
-    & .contact-footer{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    & img {
-      max-width: 20px;
-      max-height: 20px;
-    }
-  
-    & .links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      & .contact-footer + .contact-footer {
-        margin-left: 3rem;
-      }
-  
-      & a {
+    position: relative;
+    background: #20263e;
+    padding: 2rem 0;
+
+    & .contact-footer {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-  
-        & p {
-          display: flex;
-        }
-  
-        color: white;
-        
-        & strong {
-          color: white;
-        }
-      }
-      & img {
-        width: 20px;
-        height: 20px;
-      }
     }
-  }
-  @media (width < 660px) {
+
+    & img {
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    & .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        & .contact-footer + .contact-footer {
+            margin-left: 3rem;
+        }
+
+        & .toTop {
+            position: absolute;
+            right: 80px;
+            animation: 1s upDown infinite;
+        }
+
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & p {
+                display: flex;
+            }
+
+            color: white;
+
+            & strong {
+                color: white;
+            }
+        }
+
+        & img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+@media (width < 660px) {
     .container-footer {
-      padding: 0;
-      
-      & .links {
-        flex-direction: column;
-        gap: .5rem !important;
-      }
+        padding: 0;
+
+        & .links {
+            flex-direction: column;
+            gap: 0.5rem !important;
+        }
     }
-  }
+}
+
+@media (width <= 960px) {
+    & .container-footer {
+        & .links {
+            & .toTop {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes upDown {
+    from {
+        transform: translateY(-4px);
+    }
+
+    to {
+        transform: translateY(-2px);
+    }
+}

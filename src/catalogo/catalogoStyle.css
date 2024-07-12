@@ -48,11 +48,12 @@ header.container-header {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 440px);
     grid-template-rows: repeat(3, 1fr);
+    place-content: center;
     place-items: center;
-    gap: 1rem;
     margin-top: 2rem;
+
 }
 
 @media (width <= 1120px) {
