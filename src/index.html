@@ -1,182 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Sobre a importgoiano" />
-        <link rel="icon" type="image" href="./assets/logo3.png" />
 
-        <link rel="stylesheet" href="./styles/style.css" />
-        <script type="module" src="./scripts/index.js" defer></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sobre a importgoiano" />
+    <link rel="icon" type="image" href="./assets/logo3.png" />
 
-        <!-- import jquery -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="./scripts/index.js" defer></script>
 
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
+    <!-- import jquery -->
 
-        <!-- import cdn font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+    <!-- import cdn font awesome -->
 
-        <title>Document</title>
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body>
-        <div class="initial-header" id="home">
-            <i class="fa-solid fa-location-dot"></i> Frete gratis para alvorada
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="initial-header" id="home">
+        <i class="fa-solid fa-location-dot"></i> Frete gratis para alvorada
+    </div>
+    <div class="overlay"></div>
+    <header class="container-header">
+        <div class="logo">
+            <a href="#">
+                <img src="./assets/logo3.png" alt="Logo import go" />
+            </a>
         </div>
 
-        <header class="container-header">
-            <div class="logo">
-                <a href="#">
-                    <img src="./assets/logo3.png" alt="Logo import go" />
-                </a>
-            </div>
+        <nav data-navigation-header="navigation">
+            <ul data-list-header="list">
+                <li id="menu-x"><i class="fa-solid fa-x"></i></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#location">localização</a></li>
+                <li><a href="./catalogo/index.html">Catálogo</a></li>
+            </ul>
+        </nav>
 
-            <nav data-navigation-header="navigation">
-                <ul data-list-header="list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#location">localização</a></li>
-                    <li><a href="./catalogo/catalogo.html">Catálogo</a></li>
-                </ul>
-            </nav>
 
-            <div class="menu-burguer">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </header>
+        <i class="fa-solid fa-bars" id="menu-burguer"></i>
 
-        <section class="home">
-            <div class="left-home">
-                <h1>
-                    Confira nossos <br />
-                    <span>Produtos</span>
-                </h1>
-                <a href="#">SABER MAIS</a>
+
+
+    </header>
+
+    <section class="home">
+        <div class="left-home">
+            <div class="text-left-home">
+                <span>Confira nossos</span>
+                <span>Produtos</span>
             </div>
-            <img src="./assets/imgIdeas/Design sem nome(2).png" />
+            <a href="#">SABER MAIS</a>
+        </div>
+        <img src="./assets/imgIdeas/Design sem nome(2).png" />
+    </section>
+
+    <main class="container-main">
+        <section class="sobre-nos" id="sobre" data-anime="scroll">
+            <div class="card-sobre-nos">
+                <h1>Sobre Nós</h1>
+
+                <p>
+                    Bem-vindo à Import Goiano, sua principal fonte de
+                    produtos importados de alta qualidade. Localizados em
+                    Goiás, oferecemos uma variedade de itens internacionais,
+                    incluindo eletrônicos, moda, acessórios, e muito mais.
+                    Nossa missão é trazer o melhor do mercado global até
+                    você, com produtos autênticos e de alta qualidade.
+                    Trabalhamos com fornecedores de confiança para garantir
+                    sua satisfação. Oferecemos um atendimento personalizado
+                    e um serviço rápido e eficiente. Explore nosso site e
+                    descubra o mundo de possibilidades que a Import Goiano
+                    tem a oferecer. Agradecemos pela sua visita e esperamos
+                    proporcionar uma experiência de compra incrível!
+                </p>
+            </div>
         </section>
 
-        <main class="container-main">
-            <section class="sobre-nos" id="sobre" data-anime="scroll">
-                <div class="card-sobre-nos">
-                    <h1>Sobre Nós</h1>
+        <section class="location" id="location" data-anime="scroll">
+            <h2>Localizado em</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.939950243264!2d-46.49969282380762!3d-14.488136692152015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9351e145bee4a703%3A0xc767cc63cb64bece!2sTerminal%20Rodovi%C3%A1rio%20de%20Alvorada%20do%20Norte%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1719194521561!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border: none" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="maps"></iframe>
 
-                    <p>
-                        Bem-vindo à Import Goiano, sua principal fonte de
-                        produtos importados de alta qualidade. Localizados em
-                        Goiás, oferecemos uma variedade de itens internacionais,
-                        incluindo eletrônicos, moda, acessórios, e muito mais.
-                        Nossa missão é trazer o melhor do mercado global até
-                        você, com produtos autênticos e de alta qualidade.
-                        Trabalhamos com fornecedores de confiança para garantir
-                        sua satisfação. Oferecemos um atendimento personalizado
-                        e um serviço rápido e eficiente. Explore nosso site e
-                        descubra o mundo de possibilidades que a Import Goiano
-                        tem a oferecer. Agradecemos pela sua visita e esperamos
-                        proporcionar uma experiência de compra incrível!
-                    </p>
-                </div>
-            </section>
-
-            <section class="location" id="location" data-anime="scroll">
-                <h2>Localizado em</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.939950243264!2d-46.49969282380762!3d-14.488136692152015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9351e145bee4a703%3A0xc767cc63cb64bece!2sTerminal%20Rodovi%C3%A1rio%20de%20Alvorada%20do%20Norte%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1719194521561!5m2!1spt-BR!2sbr"
-                    width="100%"
-                    height="450"
-                    style="border: none"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="maps"
-                ></iframe>
-
-                <div class="operingHours">
-                    <h2>Horário de funcionamento</h2>
-                    <ul>
-                        <li class="open">
-                            <i class="fa-solid fa-check"></i>Setor: Rodoviário
-                        </li>
-                        <!-- <li class="open">
+            <div class="operingHours">
+                <h2>Horário de funcionamento</h2>
+                <ul>
+                    <li class="open">
+                        <i class="fa-solid fa-check"></i>Setor: Rodoviário
+                    </li>
+                    <!-- <li class="open">
                             <i class="fa-solid fa-check"></i>Enderesso: tal
                         </li> -->
-                        <li
-                            data-week="1, 2, 3, 4, 5, 6"
-                            data-time="8, 20"
-                            class="open close"
-                        >
-                            <i class="fa-solid fa-check"></i>Seg à Dom das 08:00
-                            às 20:00
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                    <li data-week="1, 2, 3, 4, 5, 6" data-time="8, 20" class="open close">
+                        <i class="fa-solid fa-check"></i>Seg à Dom das 08:00
+                        às 20:00
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <div class="products-slides" data-anime="scroll">
-                <h1>Ofertas</h1>
-                <div class="slides">
-                    <div class="slide slide1">
-                        <img src="./catalogo/imgProducts/IMG_1068.JPEG" />
-                    </div>
-                    <div class="slide slide2">
-                        <img src="./catalogo/imgProducts/IMG_1073.JPEG" />
-                    </div>
-                    <div class="slide slide3">
-                        <img src="./catalogo/imgProducts/IMG_1078.JPEG" />
-                    </div>
+        <div class="products-slides" data-anime="scroll">
+            <h1>Ofertas</h1>
+            <div class="slides">
+                <div class="slide slide1">
+                    <img src="./catalogo/imgProducts/IMG_1068.JPEG" />
+                </div>
+                <div class="slide slide2">
+                    <img src="./catalogo/imgProducts/IMG_1073.JPEG" />
+                </div>
+                <div class="slide slide3">
+                    <img src="./catalogo/imgProducts/IMG_1078.JPEG" />
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="container-footer">
-            <div class="links">
-                <a href="#">
-                    <div class="contact-footer">
-                        <strong>Telefone:</strong>
-                        <a href="tel:+5511999999999">(11) 99999-9999</a>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="contact-footer">
-                        <p>
-                            <strong>Instagram:</strong>
-                            <a
-                                href="https://www.instagram.com/importgoiano"
-                                target="_blank"
-                                >@importgoiano</a
-                            >
-                        </p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="contact-footer">
-                        <p>
-                            <strong>Email:</strong>
-                            <a href="mailto:xxxxx@exemplo.com"
-                                >seuemail@exemplo.com</a
-                            >
-                        </p>
-                    </div>
-                </a>
+    <footer class="container-footer">
+        <div class="links">
+            <a href="#">
+                <div class="contact-footer">
+                    <strong>Telefone:</strong>
+                    <a href="tel:+5511999999999">(11) 99999-9999</a>
+                </div>
+            </a>
+            <a href="#">
+                <div class="contact-footer">
+                    <p>
+                        <strong>Instagram:</strong>
+                        <a href="https://www.instagram.com/importgoiano" target="_blank">@importgoiano</a>
+                    </p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="contact-footer">
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:xxxxx@exemplo.com">seuemail@exemplo.com</a>
+                    </p>
+                </div>
+            </a>
 
-                <a href="#home" class="toTop">
-                    <i class="fa-solid fa-arrow-up"></i>
-                </a>
-            </div>
-        </footer>
-    </body>
+            <a href="#home" class="toTop">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
