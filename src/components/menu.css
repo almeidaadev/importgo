@@ -1,6 +1,10 @@
 #menu-x, #menu-burguer {
     display: none;
     cursor: pointer;
+
+    color: white;
+    padding: .5rem;
+    z-index: 1000;
 }
 
 @media (width <= 900px) {
@@ -13,7 +17,6 @@
         position: absolute;
         right: 20px;
         top: -45px;
-        color: white;
     }
 
     .overlay.active {

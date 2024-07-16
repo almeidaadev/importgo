@@ -44,7 +44,7 @@ header.container-header {
 
     & ul {
         display: flex;
-        
+
         flex: 1;
 
         color: var(--dark);
@@ -64,13 +64,11 @@ header.container-header {
         border-radius: 50%;
     }
 
-
     & .search {
         position: relative;
         overflow: hidden;
 
         & input {
-            
             outline: none;
             overflow: hidden;
             padding: 0.5rem;
@@ -202,23 +200,21 @@ header.container-header {
 }
 
 @media (width <= 900px) {
-
-
     header.container-header {
         justify-content: space-between;
-        
+
         & nav[data-navigation-header] {
-          z-index: 999;
-          display: none;
-          position: absolute;
-          right: 0;
-          top: 6.2rem;
-          background: #1c2841;
-          width: 300px;
-          padding: 2rem;
-          border-radius: 0 0 0 1rem;
-          animation: rightLeft 0.5s forwards;
-          overflow-x: hidden;
+            z-index: 999;
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 6.2rem;
+            background: #1c2841;
+            width: 300px;
+            padding: 2rem;
+            border-radius: 0 0 0 1rem;
+            animation: rightLeft 0.5s forwards;
+            overflow-x: hidden;
         }
 
         & ul[data-list-header] {
